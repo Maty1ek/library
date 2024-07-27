@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="main_container">
+        <div class="add_book_con" id="addBook">
+            <div class="add_book_button">
+                <i class="fa-solid fa-plus"></i>
+                <h1>ADD A NEW BOOK</h1>
+            </div>
+        </div>
+
+        <div class="book_info_con">
+            <div class="book_item">
+                <h1></h1>
+                <h2>Author: <span></span></h2>
+                <h3>Was written: <span></span></h3>
+                <h3>Pages: <span></span></h3>
+                <h3>Not read yet</h3>
+                <div class="book_item_buttons">
+                    <button id="readBtn" class="read_btn" type="button">
+                        Read
+                    </button>
+                    <button id="deleteBtn" class="delete_btn" type="button">
+                        Delete
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="books_storage_con">
+
+        </div>
+    </div>
+
+    <div id="modalWindow" class="modal_window_con">
+        <div class="modal_window">
+            <i id="crossBtn" class="fa-solid fa-x x_btn"></i>
+            <h1>Write some info</h1>
+            <form id="modalWindowForm" method="post">
+                <div class="modal_window_item">
+                    <label for="book_name">Enter the name of the book: </label>
+                    <input type="text" placeholder="Harry Potter" required name="book_name">
+                </div>
+
+                <div class="modal_window_item">
+                    <label for="auth_name">Enter the author's name: </label>
+                    <input type="text" placeholder="J. K. Roalling" required name="auth_name">
+                </div>
+
+                <div class="modal_window_item">
+                    <label for="date">The date of releasing: </label>
+                    <input type="text" placeholder="1996 year" name="date" required>
+                </div>
+
+                <div class="modal_window_item">
+                    <label for="pages">The amount of pages: </label>
+                    <input type="text" placeholder="456" name="pages" required>
+                </div>
+
+                <div class="modal_window_item">
+                    <label for="read">Have you read it? </label>
+                    <select name="select">
+                        <option value="true" selected>Yes</option>
+                        <option value="false">No</option>
+                    </select>
+                </div>
+
+                <button class="aubmit_btn" type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+    <script src="https://kit.fontawesome.com/7ac26661e5.js" crossorigin="anonymous"></script>
+    <script src="library.js"></script>
+</body>
+
+</html>
