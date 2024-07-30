@@ -32,8 +32,6 @@ function addBookToLibrary(e) {
     clearInputs()
 }
 
-console.log(Object.getPrototypeOf(addBtn));
-
 function clearInputs() {
     for (let i = 0; i < inputsArray.length; i++) {
         inputsArray[i].value = ''

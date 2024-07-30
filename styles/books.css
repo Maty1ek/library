@@ -1,0 +1,56 @@
+
+.book_info_con {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 300px);
+    padding: 45px 0;
+    gap: 60px;
+    justify-content: center;
+}
+
+.book_item {
+    background-color: #fff;
+    height: 400px;
+    padding: 30px;
+    border-radius: 30px;
+}
+
+.book_item h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.book_item h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.book_item h3 {
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.book_item_buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 80px;
+}
+
+.book_item_buttons button {
+    border: none;
+    outline: none;
+    width: 110px;
+    border-radius: 10px;
+    height: 45px;
+    font-size: 22px;
+}
+
+.delete_btn {
+    background-color: #ff074dfa;
+    color: rgb(0, 0, 0);
+}
+
+.read_btn {
+    background-color: #ffaecd;
+}

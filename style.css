@@ -1,178 +1,22 @@
 @import url('reset.css');
+@import url('styles/addBook.css');
+@import url('styles/books.css');
+@import url('styles/modalWindow.css');
 
 .main_container {
-    /* width: 100vw; */
     min-height: 100vh;
     display: grid;
-    grid-template-columns: minmax(600px, 3fr) minmax(250px, 1fr);
     background-color: #d4d4d4;
     font-family: 'Roboto';
 }
 
-.add_book_con {
-    background-color: #20ff81;
-    margin: 10px 5px 5px 10px;
-    border-radius: 40px;
-    border: 3px solid #fff;
-    color: #fff;
-    font-weight: 700;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    /* padding: 20px 0; */
-    height: 140px;
+/* removing the spiinners from number inputs */
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
 }
 
-.add_book_button {
-    text-align: center;
-}
-
-.add_book_button i {
-    font-size: 60px;
-    margin-bottom: 20px;
-}
-
-.add_book_button h1 {
-    font-size: 24px;
-}
-
-
-
-.books_storage_con {
-    grid-area: 1/ 2/ 3 / 3;
-    background-color: #ff4378e9;
-    border-radius: 40px;
-    margin: 10px 10px 10px 5px;
-    border: 3px solid #fff;
-    height: 95vh;
-}
-
-
-.book_info_con {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, 300px);
-    padding: 45px 0;
-    gap: 60px;
-    justify-content: center;
-}
-
-.book_item {
-    background-color: #fff;
-    height: 400px;
-    padding: 30px;
-    border-radius: 30px;
-}
-
-.book_item h1 {
-    font-size: 36px;
-    margin-bottom: 20px;
-    font-weight: 700;
-}
-
-.book_item h2 {
-    font-size: 30px;
-    margin-bottom: 20px;
-}
-
-.book_item h3 {
-    font-size: 20px;
-    margin-top: 10px;
-}
-
-.book_item_buttons {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-top: 80px;
-}
-
-.book_item_buttons button {
-    border: none;
-    outline: none;
-    width: 110px;
-    border-radius: 10px;
-    height: 45px;
-    font-size: 22px;
-}
-
-.delete_btn {
-    background-color: #ff074dfa;
-    color: rgb(0, 0, 0);
-}
-
-.read_btn {
-    background-color: #ffaecd;
-}
-
-
-.modal_window_con {
-    position: fixed;
-    width: 100vw;
-    height: 100vh;
-    top: 0;
-    left: 0;
-    background-color: #4e4e4e56;
-    backdrop-filter: blur(2px);
-    display: flex;
-    justify-content: center;
-    font-family: 'Roboto';
-    align-items: center;
-    display: none;
-}
-
-.modal_window {
-    background-color: white;
-    width: 500px;
-    height: 600px;
-    border-radius: 30px;
-    padding: 40px;
-    position: relative;
-}
-
-.modal_window h1 {
-    font-size: 40px;
-    font-weight: 700;
-    margin-bottom: 40px;
-}
-
-.modal_window_item {
-    margin-bottom: 20px;
-    width: 400px;
-    display: flex;
-    justify-content: space-between;
-}
-
-.modal_window_item input {
-    border-radius: 15px;
-    padding: 7px;
-    border: 1px solid #000;
-    outline: none;
-}
-
-.aubmit_btn {
-    border: 0;
-    background-color: #ffffff;
-    padding: 10px 25px;
-    border-radius: 20px;
-    font-size: 24px;
-    border: 2px solid #000;
-    margin-top: 50px;
-    margin-inline: calc( (100% - 130px) / 2);
-}
-
-select {
-    width: 150px;
-    height: 30px;
-    padding-left: 40px ;
-}
-
-.dis_flex {
-    display: flex;
-}
-
-.x_btn {
-    position: absolute;
-    font-size: 20px;
-    right: 30px;
-    top: 30px;
+input[type=number] {
+    -moz-appearance: textfield;
 }
