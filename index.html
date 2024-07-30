@@ -22,22 +22,8 @@
             </div>
         </div>
 
-        <div class="book_info_con">
-            <div class="book_item">
-                <h1></h1>
-                <h2>Author: <span></span></h2>
-                <h3>Was written: <span></span></h3>
-                <h3>Pages: <span></span></h3>
-                <h3>Not read yet</h3>
-                <div class="book_item_buttons">
-                    <button id="readBtn" class="read_btn" type="button">
-                        Read
-                    </button>
-                    <button id="deleteBtn" class="delete_btn" type="button">
-                        Delete
-                    </button>
-                </div>
-            </div>
+        <div id="bookCards" class="book_info_con">
+            
         </div>
 
         <div class="books_storage_con">
@@ -73,7 +59,7 @@
                 <div class="modal_window_item">
                     <label for="read">Have you read it? </label>
                     <select name="select">
-                        <option value="true" selected>Yes</option>
+                        <option id="yesOption" value="true" selected>Yes</option>
                         <option value="false">No</option>
                     </select>
                 </div>
