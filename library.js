@@ -41,6 +41,64 @@ function clearInputs() {
     yesOption.selected = true
 }
 
+function addBookToPage() {
+    for (let i = 0; i < bookLibrary.length; i++) {
+        var add_name = bookLibrary[i].name
+        var add_author = bookLibrary[i].author
+        var add_year = bookLibrary[i].year
+        var add_pages = bookLibrary[i].pages
+        var add_read = bookLibrary[i].read
+    }
+
+    const bookContent = `<h1>${add_name}</h1>
+                <h2>Author: <span>${add_author}</span></h2>
+                <h3>Was written: <span>${add_year}</span></h3>
+                <h3>Pages: <span>${add_pages}</span></h3>
+                `
+
+    bookItemElements(add_read, bookContent)
+}
+
+function bookItemElements(addRead, bookContent) {
+    const deleteBtn = document.createElement('button')
+    const readBtn = document.createElement('button')
+    const readOrNot = document.createElement('h3')
+    const buttonContainer = document.createElement('div')
+    const bookItem = document.createElement('div')
+
+    let readValue = addRead ? 'Alreafy read' : 'Not read yet'
+
+    readOrNot.innerHTML = readValue
+
+    deleteBtn.className = 'delete_btn'
+    deleteBtn.type = 'button'
+    deleteBtn.innerHTML = 'Delete'
+
+    readBtn.className = 'read_btn'
+    readBtn.type = 'button'
+    readBtn.innerHTML = 'Read'
+
+    buttonContainer.className = 'book_item_buttons'
+    buttonContainer.appendChild(readBtn)
+    buttonContainer.appendChild(deleteBtn)
+
+    bookItem.className = 'book_item'
+    bookItem.innerHTML = bookContent
+    bookItem.appendChild(readOrNot)
+    bookItem.appendChild(buttonContainer)
+
+    bookCards.appendChild(bookItem)
+
+    deleteBtn.addEventListener('click', () => {
+        bookItem.remove()
+    })
+
+    readBtn.addEventListener('click', () => {
+        addRead ? addRead = false : addRead = true
+        readOrNot.innerHTML = !addRead ? 'Not read yet' : 'Alreafy read'
+    })
+}
+
 function toggleModal() {
     modalWindow.classList.toggle('dis_flex')
 }
